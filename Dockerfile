@@ -1,5 +1,5 @@
 FROM openjdk:8-jdk
-RUN ./mvnw install -DskipTests
+RUN mvn clean install
 VOLUME /tmp
 ARG JAR_FILE
 COPY ${JAR_FILE} app.jar
